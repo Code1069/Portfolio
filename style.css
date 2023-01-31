@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html body {
+  min-width: 400px;
+  color: black;
+  background-color: white;
+  font-family: "poppings", arial, sans-serif;
+  line-height: 2;
+}
+
+#navbar {
+  text-align: right;
+  display: inline-block;
+  position: fixed;
+}
+
+.nav-link {
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 1%;
+  left: 42%;
+  width: 50%;
+  height: 20em;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: flex-end;
+  justify-content: right;
+  list-style: none;
+}
+
+#navbar ul li {
+  display: inline;
+  flex-direction: flex-end;
+  align-items: right;
+  justify-content: space-around;
+}
+
+li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+@media (max-width: 480px) {
+  li a {
+    display: flex;
+    flex-direction: flex-end;
+  }
+}
+
+#welcome-section li a:hover {
+  animation-name: background-color;
+  animation-duration: 3s;
+}
+
+a:hover {
+  animation-name: color;
+  animation-duration: 3s;
+}
+
+@keyframes background-color {
+  100% {
+    background-color: lightblue;
+  }
+}
+
+@keyframes color {
+  100% {
+    background-color: orange;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: indigo;
+}
+
+@media (max-width: 480px) {
+  li a {
+    font-size: 3em;
+  }
+}
+
+/*
+ styles for welcome section
+*/
+
+#welcome-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://wallpaperboat.com/wp-content/uploads/2019/10/free-space-background-04.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+@media (max-width: 3000px) {
+  .welcome-about {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+h1 {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  font-family: monospace;
+  font-size: 4em;
+  margin: 20px;
+  padding: 0.1em;
+  border-right: 1px solid orange;
+  animation: typing 10s steps(16), infinite;
+}
+
+/*
+ animation for welcome section
+*/
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+}
+
+.welcome-about {
+  font-size: 20px;
+  text-align: center;
+  font-family: monospace;
+}
+
+/*
+ styles for project section
+*/
+
+#projects {
+  color: white;
+  background: linear-gradient(to right, #240505 0%, #780b0b 100%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-bottom: 3rem;
+}
+
+.projects-section-header {
+  padding-top: 2em;
+  color: white;
+  border-bottom: 0.01em solid white;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 2000px;
+  padding-top: 2em;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.project-img,
+a {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 1em;
+  padding-left: 10px;
+  margin: 10px;
+}
+
+.project-title {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+a img:hover {
+  box-shadow: 0px 10px 13px -7px white, 3px 7px 20px 12px rgba(0, 0, 0, 0);
+  transition: 0.5s;
+}
+
+.btn-show-all {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 2em;
+  margin-top: 3rem;
+  width: 10%;
+}
+
+/*
+ styles for contacts section
+*/
+
+#contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 2em;
+}
+
+.contacts-header,
+h3 {
+  font-family: monospace;
+  font-size: 40px;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  padding-top: 3.5rem;
+}
+
+@media (max-width: 600px) {
+  .contacts-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.button-contacts {
+  text-decoration: none;
+  padding: 1px;
+  font-size: 1.2em;
+}
+
+/*
+ styles for footer
+*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+}
+
+footer,
+p {
+  font-family: verdana;
+}
